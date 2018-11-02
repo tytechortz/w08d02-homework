@@ -22,6 +22,13 @@ getWeather = async () {
   }
 }  
 
+componentDidMount(){
+  this.getWeather().then((data => {
+    console.log(data, 'this is data');
+    this.setState({weather: data});
+
+  }))
+}
   render() {
     return (
       <div className="App">
